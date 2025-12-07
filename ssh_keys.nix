@@ -1,0 +1,8 @@
+{
+  # User public keys
+  keith = {
+    laptop = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ46ZX6zJQrMOdffEZqJk5bbgZpTnaExEprMDS9aQUpa keith@laptop";
+    desktop = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILVXUPyteZDsBXLsiFSVpW8Qr9qXi4wY7NkEQLeADAim keith@desktop";
+    warthog = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH9Fy/pN77dfMrER6gnP+cnxNdn2J/eJQ2NDzPWrGvPN keith@warthog";
+  };
+}
