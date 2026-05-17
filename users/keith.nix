@@ -6,6 +6,7 @@
 
     extraGroups = [
       "wheel"
+      "plugdev"
     ];
 
     shell = pkgs.zsh;
