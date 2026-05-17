@@ -20,9 +20,9 @@
           modules = [
             nixos-raspberrypi.nixosModules.raspberry-pi-5.base
             ./core.nix
-            ./gnome.nix
-            ./radio.nix
-            ./sunshine.nix
+            #./gnome.nix
+            #./radio.nix
+            #./sunshine.nix
           ];
         };
       };
