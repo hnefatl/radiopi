@@ -6,23 +6,13 @@
     inputs@{ self, nixos-raspberrypi }:
     {
       nixosConfigurations = {
-        radiopiInstaller = nixos-raspberrypi.lib.nixosInstaller {
+        radiopi = nixos-raspberrypi.lib.nixosSystem {
           specialArgs = inputs;
 
           modules = [
             nixos-raspberrypi.nixosModules.raspberry-pi-5.base
-            ./core.nix
-          ];
-        };
-        radiopi = nixos-raspberrypi.lib.nixosSystemFull {
-          specialArgs = inputs;
-
-          modules = [
-            nixos-raspberrypi.nixosModules.raspberry-pi-5.base
-            ./core.nix
-            #./gnome.nix
-            #./radio.nix
-            #./sunshine.nix
+            nixos-raspberrypi.nixosModules.sd-image
+            ./configuration.nix
           ];
         };
       };

@@ -8,6 +8,12 @@
   imports = [
     ./users/users.nix
     ./filesystems.nix
+    ./nosleep.nix
+    ./mdns.nix
+    ./nosleep.nix
+    #./gnome.nix
+    #./remote_desktop.nix
+    ./radio.nix
   ];
 
   networking.hostName = "radiopi";
@@ -17,6 +23,7 @@
   i18n.defaultLocale = "en_GB.UTF-8";
 
   boot.loader.raspberry-pi.bootloader = "kernel";
+  security.polkit.enable = true;
   security.sudo.wheelNeedsPassword = false;
 
   # TTY config
@@ -33,16 +40,17 @@
 
   services.openssh.enable = true;
   programs.zsh.enable = true;
-  #programs.nh.enable = true;
+  programs.nh.enable = true;
   programs.git.enable = true;
 
   environment.systemPackages = with pkgs; [
-    #curl
-    #wget
-    #htop
-    #ncdu
-    #python3
-    #unzip
+    curl
+    wget
+    htop
+    ncdu
+    python3
+    unzip
+    openssl
   ];
 
   nix = {
