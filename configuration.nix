@@ -8,11 +8,8 @@
   imports = [
     ./users/users.nix
     ./filesystems.nix
-    ./nosleep.nix
     ./mdns.nix
     ./nosleep.nix
-    #./gnome.nix
-    #./remote_desktop.nix
     ./radio.nix
   ];
 
